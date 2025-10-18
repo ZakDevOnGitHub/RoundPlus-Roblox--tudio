@@ -9,14 +9,12 @@ local module = {}
 
 -- Rounds a number DOWN from the nearest user-specified decimal point e.g. Setting 1 for the nearest decimal point will round down to 0.X
 function module.floor(number, nearestDecimalPoint)
-	if typeof(number) == typeof(1) then
-	else
+	if typeof(number) ~= typeof(1) then -- Checks if the type of the number variable is a Number type
 		warn("RoundPlus v1.0 : " .. tostring(number) .. " is NOT a valid number type or is nil!")
 		return
 	end
 	
-	if typeof(nearestDecimalPoint) == typeof(1) then
-	else
+	if typeof(nearestDecimalPoint) ~= typeof(1) then -- Checks if the type of the number variable is a Number type
 		warn("RoundPlus v1.0 : " .. tostring(nearestDecimalPoint) .. " is NOT a valid number type or is nil!")
 		return
 	end
@@ -49,14 +47,12 @@ end
 
 -- Rounds a number UP from the nearest user-specified decimal point e.g. Setting 1 for the nearest decimal point will round up to 0.X
 function module.ceil(number, nearestDecimalPoint)
-	if typeof(number) == typeof(1) then
-	else
+	if typeof(number) ~= typeof(1) then -- Checks if the type of the number variable is a Number type
 		warn("RoundPlus v1.0 : " .. tostring(number) .. " is NOT a valid number type or is nil!")
 		return
 	end
 
-	if typeof(nearestDecimalPoint) == typeof(1) then
-	else
+	if typeof(nearestDecimalPoint) ~= typeof(1) then
 		warn("RoundPlus v1.0 : " .. tostring(nearestDecimalPoint) .. " is NOT a valid number type or is nil!")
 		return
 	end
@@ -72,14 +68,12 @@ end
 
 -- Rounds a number to the nearest user-specified decimal point e.g. Setting 1 for the nearest decimal point will round down to 0.X
 function module.round(number, nearestDecimalPoint)
-	if typeof(number) == typeof(1) then
-	else
+	if typeof(number) ~= typeof(1) then -- Checks if the type of the number variable is a Number type
 		warn("RoundPlus v1.0 : " .. tostring(number) .. " is NOT a valid number type or is nil!")
 		return
 	end
 
-	if typeof(nearestDecimalPoint) == typeof(1) then
-	else
+	if typeof(nearestDecimalPoint) ~= typeof(1) then
 		warn("RoundPlus v1.0 : " .. tostring(nearestDecimalPoint) .. " is NOT a valid number type or is nil!")
 		return
 	end
@@ -102,5 +96,6 @@ function module.round(number, nearestDecimalPoint)
 		return module.floor(number, nearestDecimalPoint)
 	end
 end
+
 
 return module
